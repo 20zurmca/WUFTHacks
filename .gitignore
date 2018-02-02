@@ -1,5 +1,14 @@
-/OurHack/nbproject/private/
-/JavaApplication1/nbproject/private/
+# Created by https://www.gitignore.io/api/netbeans
 
-/OurHack/build/
-/OurHack/dist/
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+nbactions.xml
+
+
+# End of https://www.gitignore.io/api/netbeans
+
