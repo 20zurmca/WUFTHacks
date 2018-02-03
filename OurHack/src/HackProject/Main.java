@@ -18,6 +18,7 @@ import okhttp3.Response;
  */
 public class Main {
 private Login login = new Login();
+//private Account account = new Account();
 private String API_key = null;
     public static void main(String[] args) {
         Main hp = new Main();
@@ -30,6 +31,7 @@ private String API_key = null;
         
         try {
             API_key = login.getAPI_key();
+            
             //login();
             //account();
             //trans();
