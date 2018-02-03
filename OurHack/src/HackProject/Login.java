@@ -56,7 +56,30 @@ public class Login {
 
         Response response = client.newCall(request).execute();
         if (response.isSuccessful()) {
-            return response.body().string();
+            String key = response.body().string();
+            String[] parts = key.split(":");
+            if(parts.length == 2){
+                String step_1 = parts[1].replaceAll("\"", "");
+                //String step_2 = step_1.replaceAll("}", "");
+                char[] chars = step_1.toCharArray();
+                StringBuilder sb = new StringBuilder();
+                int wanted_length;
+                if(chars.length > 162){
+                    wanted_length = 162;    
+                }else{
+                    wanted_length = chars.length -1;
+                }
+                for(int i = 0; i < wanted_length; i++){
+                sb.append(chars[i]);
+                }
+                
+                String real_key = sb.toString();
+
+                return real_key;
+            }else{
+                return null;
+            }
+            
         } else {
 
             return null;

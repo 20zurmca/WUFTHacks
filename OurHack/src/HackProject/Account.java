@@ -15,6 +15,31 @@ import okhttp3.Response;
  * @author cameron
  */
 public class Account {
+    private boolean success;
+    public Account(){
+        success = false;
+    
+    }
+    public boolean getSuccess(){
+        
+        return success;
+    }
+    public void run(String key){
+        String info = null;
+        try{
+            
+        info = get_info(key);
+            
+        }catch(IOException e){
+            System.out.println("Not getting account information");
+        }
+        
+        if(info!= null){
+            System.out.println(info);
+        }
+        
+        
+    }
     
     private String API_key;
     
@@ -44,11 +69,13 @@ public class Account {
                 .build();
 
         Response response = client.newCall(request).execute();
-        
+        //System.out.println(response.body().string());
         if (response.isSuccessful()) {
+            success = true;
             return response.body().string();
         } else {
-
+            //System.out.println("get_info error");
+            success = false;
             return null;
         }
    }
