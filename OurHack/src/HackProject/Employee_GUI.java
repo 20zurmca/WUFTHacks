@@ -7,6 +7,7 @@ package HackProject;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -36,7 +37,7 @@ public class Employee_GUI extends javax.swing.JFrame {
         passcodeLabel = new javax.swing.JLabel();
         passwordField = new javax.swing.JPasswordField();
         enterButton = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        usernameEntry = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -70,11 +71,11 @@ public class Employee_GUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
-        jTextField1.setText("jTextField1");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        usernameEntry.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
+        usernameEntry.setText("jTextField1");
+        usernameEntry.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                usernameEntryActionPerformed(evt);
             }
         });
 
@@ -97,7 +98,7 @@ public class Employee_GUI extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(employeePortalLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 691, Short.MAX_VALUE)
                             .addComponent(passwordField)
-                            .addComponent(jTextField1))
+                            .addComponent(usernameEntry))
                         .addGap(329, 329, 329))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -108,7 +109,7 @@ public class Employee_GUI extends javax.swing.JFrame {
                 .addGap(113, 113, 113)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(usernamelabel)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(usernameEntry, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passcodeLabel)
@@ -122,23 +123,24 @@ public class Employee_GUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 359, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 41, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void enterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterButtonActionPerformed
-        if(passwordField.getPassword().equals("wufthacks2018") && )
-        {
+        String passCode = new String(passwordField.getPassword());
+        if (passCode.equals("wufthacks2018") && usernameEntry.getText().equals("stephanjoe141")) {
+
+        } else {
+           JOptionPane.showMessageDialog(null, "Incorrect login information", "Identification Failure", JOptionPane.INFORMATION_MESSAGE);
+            System.out.println(passCode);
+            System.out.println(usernameEntry.getText());
 
         }
     }//GEN-LAST:event_enterButtonActionPerformed
@@ -147,9 +149,9 @@ public class Employee_GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordFieldActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void usernameEntryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameEntryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_usernameEntryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,9 +191,9 @@ public class Employee_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel employeePortalLabel;
     private javax.swing.JButton enterButton;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JLabel passcodeLabel;
     private javax.swing.JPasswordField passwordField;
+    private javax.swing.JTextField usernameEntry;
     private javax.swing.JLabel usernamelabel;
     // End of variables declaration//GEN-END:variables
 }
