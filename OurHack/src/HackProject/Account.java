@@ -1,3 +1,7 @@
+
+package HackProject;
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,73 +13,64 @@
  * @author cameron
  */
 public class Account {
-        
+
+    private Customer owner;
+
     
-    
-    private String owner;
-    private String type;
     private int balance;
+    
     private long acctNum;
-    private boolean onlineAccessEnabled;
+    
+    private String status;
+    
     private boolean isJointAcct;
     
-    public String getOwner(){
+    
+    public Account(Customer owner, long acctNum, int balance, boolean isJointAcct, String status)
+    {
+        
+    }
+
+    public Customer getOwner() {
         return owner;
     }
-    public String getType(){
-        return type;
-    }
-    public int getBalance(){
-        return balance;
-    }
-    public long getAcctNum(){
-        return acctNum;
-    }
-    
-    public void setOwner(String owner){
+
+    public void setOwner(Customer owner) {
         this.owner = owner;
     }
-    
-    public void setType(String type){
-        this.type = type;
+
+    public int getBalance() {
+        return balance;
     }
-    
-    public void setBalance(int balance){
+
+    public void setBalance(int balance) {
         this.balance = balance;
     }
-    
-    public void setAcctNum(long acctNum){
+
+    public long getAcctNum() {
+        return acctNum;
+    }
+
+    public void setAcctNum(long acctNum) {
         this.acctNum = acctNum;
     }
 
-    /**
-     * @return the onlineAccessEnabled
-     */
-    public boolean isOnlineAccessEnabled() {
-        return onlineAccessEnabled;
+    public String getStatus() {
+        return status;
     }
 
-    /**
-     * @param onlineAccessEnabled the onlineAccessEnabled to set
-     */
-    public void setOnlineAccessEnabled(boolean onlineAccessEnabled) {
-        this.onlineAccessEnabled = onlineAccessEnabled;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    /**
-     * @return the isJointAcct
-     */
     public boolean isIsJointAcct() {
         return isJointAcct;
     }
 
-    /**
-     * @param isJointAcct the isJointAcct to set
-     */
     public void setIsJointAcct(boolean isJointAcct) {
         this.isJointAcct = isJointAcct;
     }
-    
-    
-    
+
+
+
 }

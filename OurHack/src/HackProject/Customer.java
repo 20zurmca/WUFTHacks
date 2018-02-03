@@ -11,4 +11,22 @@ package HackProject;
  */
 public class Customer {
     
+    private String firstName;
+    
+    private String middleName;
+    
+    private String lastName;
+    
+    public Customer(String first, String middle, String last)
+    {
+        firstName = first;
+        middleName = middle;
+        lastName = last;
+    }
+    
+    @Override
+    public String toString()
+    {
+        return lastName + ", " + firstName + " " + middleName.charAt(0);
+    }
 }
