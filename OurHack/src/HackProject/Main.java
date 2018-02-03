@@ -46,7 +46,10 @@ private boolean success;
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        
+        account.parse();
+        
+        
         System.out.println("Hello world");
 
     }
