@@ -27,6 +27,7 @@ public class Main {
         try {
             login();
             account();
+            trans();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -71,4 +72,20 @@ Response response = client.newCall(request).execute();
         System.out.println(response.body().string());
     }
 
+    public void trans() throws IOException{
+       OkHttpClient client = new OkHttpClient();
+
+Request request = new Request.Builder()
+  .url("https://api-wufthacks.xlabs.one:8243/td/transaction/V1.0.0/transaction/all?page=1&size=1")
+  .get()
+  .addHeader("Accept", "application/json")
+  .addHeader("X-Api-Key", "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGVwaGFuam9lMTQxIiwiZXhwIjoxNTE4NTAyNTc2fQ.cy6BOFlfh7tAWs44ZIKoF4HXCY6RVLUd-NJlaYgdeoByxb0E3ShdCTvdIhqeZyfn6lU41vDvVsax-gS8uurwYg")
+  .addHeader("Authorization", "Bearer c229f874-c45a-3e4e-8366-1cf2eee0055c")
+  .addHeader("Cache-Control", "no-cache")
+  .addHeader("Postman-Token", "de689913-0557-ea4a-8db5-ca969422abe5")
+  .build();
+
+Response response = client.newCall(request).execute();
+System.out.println(response.body().string());
+    }
 }
