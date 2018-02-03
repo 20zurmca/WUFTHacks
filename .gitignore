@@ -12,3 +12,5 @@ nbactions.xml
 
 # End of https://www.gitignore.io/api/netbeans
 
+/OurHack/nbproject/private/
+/JavaApplication3/nbproject/private/
