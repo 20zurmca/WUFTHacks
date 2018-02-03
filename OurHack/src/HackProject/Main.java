@@ -4,9 +4,12 @@
  * and open the template in the editor.
  */
 package HackProject;
+
 import java.io.IOException;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
@@ -15,43 +18,57 @@ import okhttp3.Response;
  */
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Main hp = new Main();
         hp.run();
     }
-    
 
-   
-    public void run(){
-        try{
-         test();
-        }catch(IOException e){
-        e.printStackTrace();
+    public void run() {
+        try {
+            login();
+            account();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-            
-        
-        
-        
+
         System.out.println("Hello world");
-        
+
     }
 
-    public void test() throws IOException {
+    public void login() throws IOException {
         OkHttpClient client = new OkHttpClient();
 
+MediaType mediaType = MediaType.parse("application/json");
+RequestBody body = RequestBody.create(mediaType, "{\n  \"password\": \"stephanjoe141\",\n  \"username\": \"stephanjoe141\"\n}");
 Request request = new Request.Builder()
-  .url("https://api-wufthacks.xlabs.one:8243/td/account/V1.0.0/account/all?page=1&size=1")
-  .get()
+  .url("https://api-wufthacks.xlabs.one:8243/userSignin/V1.0.0/signin")
+  .post(body)
+  .addHeader("Content-Type", "application/json")
   .addHeader("Accept", "application/json")
-  .addHeader("X-Api-Key", "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGVwaGFuam9lMTQxIiwiZXhwIjoxNTE4NDkzMzc1fQ.PsrtsBoluOKSVv798e9ryJDfCW1zNtTAp4XsgmF9e_S7A9C-hwcvjlcryxZZ_lMMzUjP3lXKmhQIFIkhpfUgEg")
   .addHeader("Authorization", "Bearer c229f874-c45a-3e4e-8366-1cf2eee0055c")
   .addHeader("Cache-Control", "no-cache")
-  .addHeader("Postman-Token", "47cf7e52-71b4-6d82-76a0-8c2964646946")
+  .addHeader("Postman-Token", "b8d4508d-6b02-d41b-bf54-61b83360d630")
   .build();
 
 Response response = client.newCall(request).execute();
-System.out.println(response.body().string());
+        System.out.println(response.body().string());
     }
 
+    public void account() throws IOException {
+        OkHttpClient client = new OkHttpClient();
+
+        Request request = new Request.Builder()
+                .url("https://api-wufthacks.xlabs.one:8243/td/account/V1.0.0/account/all?page=1&size=1")
+                .get()
+                .addHeader("Accept", "application/json")
+                .addHeader("X-Api-Key", "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdGVwaGFuam9lMTQxIiwiZXhwIjoxNTE4NDkzMzc1fQ.PsrtsBoluOKSVv798e9ryJDfCW1zNtTAp4XsgmF9e_S7A9C-hwcvjlcryxZZ_lMMzUjP3lXKmhQIFIkhpfUgEg")
+                .addHeader("Authorization", "Bearer c229f874-c45a-3e4e-8366-1cf2eee0055c")
+                .addHeader("Cache-Control", "no-cache")
+                .addHeader("Postman-Token", "dedf4b7e-c2fe-3d73-deca-bf3cb6b5dd19")
+                .build();
+
+        Response response = client.newCall(request).execute();
+        System.out.println(response.body().string());
+    }
 
 }
