@@ -17,17 +17,21 @@ import okhttp3.Response;
  * @author cameron
  */
 public class Main {
-
+private Login login = new Login();
     public static void main(String[] args) {
         Main hp = new Main();
         hp.run();
     }
 
     public void run() {
+        login.setUsername("stephanjoe141");
+        login.setpassword("stephanjoe141");
+        
         try {
-            login();
-            account();
-            trans();
+            System.out.println(login.getAPI_key());
+            //login();
+            //account();
+            //trans();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -37,6 +41,7 @@ public class Main {
     }
 
     public void login() throws IOException {
+        
         OkHttpClient client = new OkHttpClient();
 
 MediaType mediaType = MediaType.parse("application/json");
