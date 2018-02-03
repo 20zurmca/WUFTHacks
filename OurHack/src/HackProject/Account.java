@@ -1,4 +1,3 @@
-
 package HackProject;
 
 
@@ -7,7 +6,6 @@ package HackProject;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author cameron
@@ -15,19 +13,22 @@ package HackProject;
 public class Account {
 
     private Customer owner;
-    
+
     private int balance;
-    
+
     private long acctNum;
-    
+
     private String status;
-    
+
     private boolean isJointAcct;
-    
-    
-    public Account(Customer owner, long acctNum, int balance, boolean isJointAcct, String status)
-    {
-        
+
+    public Account(Customer owner, long acctNum, int balance, boolean isJointAcct, String status) {
+        this.owner = owner;
+        this.acctNum = acctNum;
+        this.balance = balance;
+        this.isJointAcct = isJointAcct;
+        this.status = status;
+
     }
 
     public Customer getOwner() {
@@ -69,7 +70,5 @@ public class Account {
     public void setIsJointAcct(boolean isJointAcct) {
         this.isJointAcct = isJointAcct;
     }
-
-
 
 }
