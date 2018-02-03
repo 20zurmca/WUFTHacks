@@ -5,11 +5,14 @@
  */
 package HackProject;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author cameron
  */
 public class Bank {
     
+    private ArrayList<Account> accounts = new ArrayList<>();
     
 }
