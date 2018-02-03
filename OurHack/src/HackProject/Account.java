@@ -74,4 +74,6 @@ public class Account {
         this.isJointAcct = isJointAcct;
     }
     
+    
+    
 }
