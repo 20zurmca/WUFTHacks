@@ -17,7 +17,6 @@ public class Transaction {
     
     private Employee employee;
     
-    private String type; //transaction type
     
     public Transaction(Account account, Customer user, Employee employee)
     {
@@ -33,7 +32,7 @@ public class Transaction {
      @Override
     public String toString()
     {
-      return user + account + type + 
+      return user + " " + account;
     }
 
     public void setAccount(Account account) {
@@ -54,15 +53,5 @@ public class Transaction {
 
     public void setEmployee(Employee employee) {
         this.employee = employee;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-    
-    
+    }    
 }
