@@ -18,11 +18,11 @@ public class Bank {
     
     
     public Bank () {
-        loadData();
+       // loadData(fileName);
     }
     
     
-    private void loadData()
+    private void loadData(String fileName)
     {
         BufferedReader reader = null;
         try{
