@@ -6,7 +6,7 @@
 package HackProject;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 /**
  *
@@ -36,7 +36,33 @@ public class Employee {
     }
 
     //**************************FIELDS**************************//
-    public void logout() {
+    public void writeheader() {
+        PrintWriter pw;
+        try {
+            pw = new PrintWriter(new FileWriter(logFile));
+            pw.printf("%-20s%n", firstName + "'s" + "Log File"); //write code here 
+            pw.flush();
+            pw.close(); //close the file
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
+    public void logout() {
+        PrintWriter pw;
+        try {
+            pw = new PrintWriter(new FileWriter(logFile, true));
+            pw.println(); //write code here 
+            pw.flush();
+            pw.close(); //close the file
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @Override
+    public String toString ()
+    {
+        return firstName + lastName;
+    }
 }
