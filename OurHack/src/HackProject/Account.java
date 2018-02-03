@@ -35,11 +35,26 @@ public class Account {
         }
         
         if(info!= null){
-            System.out.println(info);
+            //System.out.println(info);
+            general_info = info;
         }
         
         
     }
+    
+    public void parse(){
+        if(general_info!=null){
+        String step_1 = general_info.replaceAll("\"","");
+        String step_2 = step_1.replaceAll("\\{","");
+        String step_3 = step_2.replaceAll("|}","");
+        String step_4 = step_2.replaceAll("\\[","");
+        String step_5 = step_4.replaceAll("\\]","");
+        System.out.println(step_5);
+                }
+    }
+    
+    
+    private String general_info;
     
     private String API_key;
     
