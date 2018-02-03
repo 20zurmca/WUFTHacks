@@ -18,8 +18,19 @@ public class Account {
     
     private String API_key;
     
+    private Customer owner;
+
+    private int balance;
+
+    private long acctNum;
+
+    private String status;
+
+    private boolean isJointAcct;
+    
    public String get_info(String key) throws IOException{
-       API_key = key;
+    
+        API_key = key;
        OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
@@ -41,26 +52,6 @@ public class Account {
             return null;
         }
    }
-
-
-    private Customer owner;
-
-    private int balance;
-
-    private long acctNum;
-
-    private String status;
-
-    private boolean isJointAcct;
-
-    public Account(Customer owner, long acctNum, int balance, boolean isJointAcct, String status) {
-        this.owner = owner;
-        this.acctNum = acctNum;
-        this.balance = balance;
-        this.isJointAcct = isJointAcct;
-        this.status = status;
-
-    }
 
     public Customer getOwner() {
         return owner;
