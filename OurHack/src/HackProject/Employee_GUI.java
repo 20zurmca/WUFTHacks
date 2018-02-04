@@ -54,7 +54,7 @@ public class Employee_GUI extends javax.swing.JFrame {
         });
 
         enterButton.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
-        enterButton.setText("LOGIN!");
+        enterButton.setText("LOGIN");
         enterButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enterButtonActionPerformed(evt);
