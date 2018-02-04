@@ -54,7 +54,7 @@ public class Employee_GUI extends javax.swing.JFrame {
         });
 
         enterButton.setFont(new java.awt.Font("Ubuntu", 1, 36)); // NOI18N
-        enterButton.setText("LOGIN");
+        enterButton.setText("LOGIN!");
         enterButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 enterButtonActionPerformed(evt);
@@ -126,8 +126,9 @@ public class Employee_GUI extends javax.swing.JFrame {
 
     private void enterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterButtonActionPerformed
         String passCode = new String(passwordField.getPassword());
-        if (passCode.equals("wufthacks2018") && usernameEntry.getText().equals("stephanjoe141")) {
-            cl = new ClientLogin();
+        if (passCode.equals("wufthacks2018") && usernameEntry.getText().equals("Cameron Zurmuhl")) {
+            new ClientLogin().setVisible(true);
+            this.setVisible(false);
             System.out.println("Success");
         } else {
             JOptionPane.showMessageDialog(null, "Incorrect login information", "Identification Failure", JOptionPane.ERROR_MESSAGE);
