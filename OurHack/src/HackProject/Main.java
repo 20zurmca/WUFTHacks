@@ -24,10 +24,10 @@ private boolean success;
     public static void main(String[] args) {
         
         Main hp = new Main();
-        hp.run();
+      //  hp.run();
     }
 
-    public void run() {
+    public void run(String userName, String passCode) {
         success = false;
         login.setUsername("stephanjoe141");
         login.setpassword("stephanjoe141");
