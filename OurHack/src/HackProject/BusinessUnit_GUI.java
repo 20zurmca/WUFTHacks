@@ -46,11 +46,6 @@ public class BusinessUnit_GUI extends javax.swing.JFrame {
         dropDown.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
         dropDown.setForeground(new java.awt.Color(0, 0, 0));
         dropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select an option", "Account Information", "Business Unit", "Transaction History" }));
-        dropDown.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dropDownActionPerformed(evt);
-            }
-        });
 
         jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -154,22 +149,6 @@ public class BusinessUnit_GUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void dropDownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dropDownActionPerformed
-      /*
-        String selection = (String) dropDown.getSelectedItem();
-        if (selection.equals("Business Unit")) {
-            this.setVisible(false);
-           new BusinessUnit_GUI().setVisible(true);
-           
-        }else if(selection.equals("Account Information"))
-        {
-            this.setVisible(false);
-           new Account_GUI().setVisible(true);
-           
-        }
-        */
-    }//GEN-LAST:event_dropDownActionPerformed
 
     private void employeeLogoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeLogoutButtonActionPerformed
         this.setVisible(false);
