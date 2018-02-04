@@ -42,9 +42,6 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[1500, 780]"/>
-        </Property>
       </Properties>
 
       <Layout>
@@ -53,26 +50,37 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="300" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="usernamelabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="passcodeLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="usernamelabel" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="passcodeLabel" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="passwordField" pref="691" max="32767" attributes="0"/>
-                      <Component id="usernameEntry" alignment="0" max="32767" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="passwordField" alignment="0" pref="691" max="32767" attributes="0"/>
+                              <Component id="usernameEntry" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="329" pref="329" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                          <Component id="accountSummaryButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="329" pref="329" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="enterButton" min="-2" pref="228" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="551" max="-2" attributes="0"/>
+                          <Component id="client_look_upLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="518" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="employeePortalLabel" min="-2" pref="581" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="384" max="-2" attributes="0"/>
+                          <Component id="employeeLogoutButton" min="-2" pref="177" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                          <Component id="jTextField1" min="-2" pref="218" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -81,9 +89,14 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
-                  <Component id="employeePortalLabel" min="-2" pref="153" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="employeeLogoutButton" alignment="3" min="-2" pref="54" max="-2" attributes="0"/>
+                      <Component id="jTextField1" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                  <Component id="client_look_upLabel" min="-2" pref="153" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="usernamelabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="usernameEntry" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
@@ -93,20 +106,20 @@
                       <Component id="passcodeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="passwordField" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                  <Component id="enterButton" min="-2" pref="87" max="-2" attributes="0"/>
-                  <EmptySpace pref="158" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
+                  <Component id="accountSummaryButton" min="-2" pref="87" max="-2" attributes="0"/>
+                  <EmptySpace pref="164" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="employeePortalLabel">
+        <Component class="javax.swing.JLabel" name="client_look_upLabel">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Ubuntu Light" size="48" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="TD Bank Employee Portal"/>
+            <Property name="text" type="java.lang.String" value="Client Look-Up"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="usernamelabel">
@@ -131,19 +144,16 @@
               <Font name="Ubuntu" size="24" style="1"/>
             </Property>
           </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="passwordFieldActionPerformed"/>
-          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="enterButton">
+        <Component class="javax.swing.JButton" name="accountSummaryButton">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Ubuntu" size="36" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="LOGIN"/>
+            <Property name="text" type="java.lang.String" value="CONTINUE TO ACCOUNT SUMMARY"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="enterButtonActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="accountSummaryButtonActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="usernameEntry">
@@ -152,8 +162,31 @@
               <Font name="Ubuntu" size="24" style="1"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="employeeLogoutButton">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Ubuntu" size="14" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Employee Logout"/>
+          </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="usernameEntryActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="employeeLogoutButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="fa" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Ubuntu" size="14" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Signed in as: zurmuhlc"/>
+            <Property name="enabled" type="boolean" value="false"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
