@@ -156,10 +156,19 @@ public class BusinessUnit_GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void dropDownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dropDownActionPerformed
-        if (dropDown.getActionCommand().equals("Account Information")) {
+      /*
+        String selection = (String) dropDown.getSelectedItem();
+        if (selection.equals("Business Unit")) {
+            this.setVisible(false);
+           new BusinessUnit_GUI().setVisible(true);
+           
+        }else if(selection.equals("Account Information"))
+        {
+            this.setVisible(false);
            new Account_GUI().setVisible(true);
-           this.setVisible(false);
+           
         }
+        */
     }//GEN-LAST:event_dropDownActionPerformed
 
     private void employeeLogoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeLogoutButtonActionPerformed
@@ -168,9 +177,16 @@ public class BusinessUnit_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_employeeLogoutButtonActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-           if (dropDown.getActionCommand().equals("Account Information")) {
+        String selection = (String) dropDown.getSelectedItem();
+        if (selection.equals("Business Unit")) {
+            this.setVisible(false);
+           new BusinessUnit_GUI().setVisible(true);
+           
+        }else if(selection.equals("Account Information"))
+        {
+             this.setVisible(false);
            new Account_GUI().setVisible(true);
-           this.setVisible(false);
+          
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -208,7 +224,7 @@ public class BusinessUnit_GUI extends javax.swing.JFrame {
             }
         });
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> dropDown;
     private javax.swing.JButton employeeLogoutButton;

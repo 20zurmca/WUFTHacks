@@ -213,10 +213,17 @@ public class Account_GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void dropDownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dropDownActionPerformed
-         if (dropDown.getActionCommand().equals("Business Information")) {
+      /*
+        String selection = (String) dropDown.getSelectedItem();
+        if (selection.equals("Business Unit")) {
            new BusinessUnit_GUI().setVisible(true);
            this.setVisible(false);
+        }else if(selection.equals("Account Information"))
+        {
+           new Account_GUI().setVisible(true);
+           this.setVisible(false);
         }
+        */
     }//GEN-LAST:event_dropDownActionPerformed
 
     private void employeeLogoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeLogoutButtonActionPerformed
@@ -225,8 +232,13 @@ public class Account_GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_employeeLogoutButtonActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        if (dropDown.getActionCommand().equals("Business Information")) {
+       String selection = (String) dropDown.getSelectedItem();
+        if (selection.equals("Business Unit")) {
            new BusinessUnit_GUI().setVisible(true);
+           this.setVisible(false);
+        }else if(selection.equals("Account Information"))
+        {
+           new Account_GUI().setVisible(true);
            this.setVisible(false);
         }
     }//GEN-LAST:event_jButton5ActionPerformed
