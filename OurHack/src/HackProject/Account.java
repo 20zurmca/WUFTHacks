@@ -38,12 +38,13 @@ public class Account {
         if(info!= null){
             //System.out.println(info);
             general_info = info;
+            parse();
         }
         
         
     }
     
-    public void parse(){
+    private void parse(){
         if(general_info!=null){
         String step_1 = general_info.replaceAll("[^a-zA-Z0-9.,:_\\s]+","");
         String[] step_2 = step_1.split(",");
@@ -205,7 +206,7 @@ public class Account {
             if(element[0].equalsIgnoreCase("version")){
                 
                 version = element[element.length-1];
-                System.out.println(version);
+                //System.out.println(version);
             }
             
         }
@@ -241,6 +242,7 @@ public class Account {
     
     private String accountType;
     
+    //dont have
     private Customer owner;
     
     private int account_ID;

@@ -19,6 +19,7 @@ import okhttp3.Response;
 public class Main {
 private Login login = new Login();
 private Account account = new Account();
+private Transaction transaction = new Transaction();
 private String API_key = null;
 private boolean success;
     public static void main(String[] args) {
@@ -36,7 +37,11 @@ private boolean success;
             while(!success){
             API_key = login.getAPI_key();
             account.run(API_key);
-            success = account.getSuccess();
+            transaction.run(API_key);
+            
+            if(account.getSuccess()&&transaction.getSuccess()){
+                success = true;
+            }
             }
             //System.out.println(API_key);
             //System.out.println(account.get_info(API_key));
@@ -47,8 +52,8 @@ private boolean success;
             e.printStackTrace();
         }
         
-        account.parse();
-        
+        //account.parse();
+        //transaction.parse();
         
         //System.out.println("Hello world");
 
