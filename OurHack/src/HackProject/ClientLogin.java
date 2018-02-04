@@ -68,7 +68,7 @@ public class ClientLogin extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setBackground(new java.awt.Color(0, 250, 0));
+        jTextField1.setBackground(new java.awt.Color(220, 220, 220));
         jTextField1.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
         jTextField1.setText("Signed in as: zurmuhlc");
         jTextField1.setEnabled(false);
@@ -149,7 +149,8 @@ public class ClientLogin extends javax.swing.JFrame {
     private void accountSummaryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountSummaryButtonActionPerformed
         String passCode = new String(passwordField.getPassword());
         if (passCode.equals("stephanjoe141") && usernameEntry.getText().equals("stephanjoe141")) {
-
+              this.setVisible(false);
+              new AccountGUI().setVisible(true);
         } else {
             JOptionPane.showMessageDialog(null, "Incorrect login information", "Identification Failure", JOptionPane.ERROR_MESSAGE);
 

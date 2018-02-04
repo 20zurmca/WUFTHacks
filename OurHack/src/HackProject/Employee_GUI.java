@@ -179,7 +179,6 @@ public class Employee_GUI extends javax.swing.JFrame {
         });
     }
 
-    private ClientLogin cl;
     private javax.swing.JLabel employeePortalLabel;
     private javax.swing.JButton enterButton;
     private javax.swing.JPanel jPanel1;

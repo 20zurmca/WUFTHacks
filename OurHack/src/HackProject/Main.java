@@ -21,6 +21,9 @@ public class Main {
     private Login login = new Login();
     private Employee_GUI employee = new Employee_GUI();
     private ClientLogin client = new ClientLogin();
+    private AccountGUI acc = new AccountGUI();
+    private Account_GUI acc2 = new Account_GUI();
+    private BusinessUnit_GUI bu = new BusinessUnit_GUI();
     private Account account = new Account();
     private Transaction transaction = new Transaction();
     private String API_key = null;
