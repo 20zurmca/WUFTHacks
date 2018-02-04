@@ -27,21 +27,111 @@ public class BusinessUnit_GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        dropDown = new javax.swing.JComboBox<>();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTextArea3 = new javax.swing.JTextArea();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(0, 200, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 780));
+
+        dropDown.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+        dropDown.setForeground(new java.awt.Color(0, 0, 0));
+        dropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select an option", "Account Information", "Business Unit", "Transaction History" }));
+        dropDown.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dropDownActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Selector");
+
+        jLabel2.setFont(new java.awt.Font("Ubuntu", 1, 48)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Stephanjoe141's Business Unit");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
+        jTextArea1.setRows(5);
+        jTextArea1.setText(" businessUnitId: 4,\n address: 112 Main Street,Fairfield, ME 04937\n bankId: 1\n bankName: TD BANK,\n bankRegNumber: 10310080,\n country: USA\n registeredAddress: 1701 Route 70 East, Cherry Hill NJ 08034,\n routingNumber: 031201360\n unitName: Fairfield\n");
+        jTextArea1.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        jTextArea1.setEnabled(false);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jTextArea3.setColumns(20);
+        jTextArea3.setRows(5);
+        jTextArea3.setText("Notes:\n\n");
+        jScrollPane3.setViewportView(jTextArea3);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(dropDown, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel1)
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(281, 281, 281)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 933, Short.MAX_VALUE)
+                            .addComponent(jScrollPane3))))
+                .addContainerGap(286, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(dropDown, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(51, 51, 51)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 61, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void dropDownActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dropDownActionPerformed
+        if (dropDown.getActionCommand().equals("AccountUnit_GUI")) {
+           ac.setVisible(true);
+           this.setVisible(false);
+        }
+    }//GEN-LAST:event_dropDownActionPerformed
 
     /**
      * @param args the command line arguments
@@ -77,7 +167,17 @@ public class BusinessUnit_GUI extends javax.swing.JFrame {
             }
         });
     }
-
+    
+ private Account_GUI ac = new Account_GUI();
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> dropDown;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea3;
     // End of variables declaration//GEN-END:variables
 }
