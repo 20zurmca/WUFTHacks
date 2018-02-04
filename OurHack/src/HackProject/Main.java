@@ -19,6 +19,8 @@ import okhttp3.Response;
 public class Main {
 
     private Login login = new Login();
+    private Employee_GUI employee = new Employee_GUI();
+    private ClientLogin client = new ClientLogin();
     private Account account = new Account();
     private Transaction transaction = new Transaction();
     private String API_key = null;
@@ -27,10 +29,13 @@ public class Main {
     public static void main(String[] args) {
 
         Main hp = new Main();
-        //  hp.run();
+        
+         hp.run();
     }
 
-    public void run(String userName, String passCode) {
+    public void run() {
+        employee.setVisible(true);
+        
         success = false;
         login.setUsername("stephanjoe141");
         login.setpassword("stephanjoe141");

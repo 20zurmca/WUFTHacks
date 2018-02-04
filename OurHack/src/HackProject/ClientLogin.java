@@ -144,11 +144,11 @@ public class ClientLogin extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
     private void accountSummaryButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountSummaryButtonActionPerformed
         String passCode = new String(passwordField.getPassword());
-        if (passCode.equals("wufthacks2018") && usernameEntry.getText().equals("stephanjoe141")) {
+        if (passCode.equals("stephanjoe141") && usernameEntry.getText().equals("stephanjoe141")) {
 
         } else {
             JOptionPane.showMessageDialog(null, "Incorrect login information", "Identification Failure", JOptionPane.ERROR_MESSAGE);
